@@ -1,0 +1,25 @@
+{
+  "name": "university-class-scheduler-samples",
+  "version": "0.0.1",
+  "description": "Code samples of the university class schedule library",
+  "scripts": {
+    "build": "tsc",
+    "start:example:scheduler": "npm run build && node dist/scheduler"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitaKemarskiy/university-class-scheduler-samples.git"
+  },
+  "author": "Кемарський Микита ІП-22мп",
+  "bugs": {
+    "url": "https://github.com/NikitaKemarskiy/university-class-scheduler-samples/issues"
+  },
+  "homepage": "https://github.com/NikitaKemarskiy/university-class-scheduler-samples#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@nikitakemarskiy/university-class-scheduler": "^0.0.5"
+  }
+}
