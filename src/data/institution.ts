@@ -10,12 +10,12 @@ import {
 export const buildings: Array<Building> = [
   {
     id: 1,
-    address: "Корпус № 18, Київ, вул. Політехнічна, 41",
+    address: "Корпус № 1",
     distant: false
   },
   {
     id: 2,
-    address: "Корпус № 7, Київ, проспект Берестейський, 37-к",
+    address: "Корпус № 2",
     distant: false
   },
 ];

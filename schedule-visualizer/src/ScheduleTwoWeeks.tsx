@@ -32,7 +32,7 @@ const ScheduleTwoWeeksTable: React.FC<ScheduleTwoWeeksProps> = ({ schedule, sche
     cellsScheduleTable[week] = [];
     for (let day = 0; day < 7; day++) {
       cellsScheduleTable[week][day] = [];
-      for (let classNumber = 1; classNumber <= 7; classNumber++) {
+      for (let classNumber = 1; classNumber <= 5; classNumber++) {
         const matchingCells = filteredAssignedScheduleCells.filter(
           (cell) =>
             cell.scheduleCell.weekNumber === week &&
@@ -105,8 +105,8 @@ const ScheduleTwoWeeksTable: React.FC<ScheduleTwoWeeksProps> = ({ schedule, sche
             <th key={3}>Середа</th>
             <th key={4}>Четвер</th>
             <th key={5}>Пʼятниця</th>
-            <th key={6}>Субота</th>
-            <th key={7}>Неділя</th>
+            {/* <th key={6}>Субота</th>
+            <th key={7}>Неділя</th> */}
           </tr>
         </thead>
         <tbody>

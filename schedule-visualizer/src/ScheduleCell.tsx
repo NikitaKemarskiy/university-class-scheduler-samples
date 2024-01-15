@@ -12,12 +12,14 @@ const ScheduleCell: React.FC<ScheduleCellProps> = ({ cell, schedulerParams }) =>
     
     return [
       `${room?.name} (${schedulerParams.roomTypes.find(({ id }) => id === room?.typeId)?.name})`,
-      `${schedulerParams.buildings.find(({ id }) => id === room?.buildingId)?.address} корпус`
+      `${schedulerParams.buildings.find(({ id }) => id === room?.buildingId)?.address}`
     ].join(', ')
   }
 
-  const disciplineClassShortName = schedulerParams.disciplineClasses
-    .find(({ id }) => id === cell.disciplineClassId)?.shortName;
+  const disciplineClass = schedulerParams.disciplineClasses
+    .find(({ id }) => id === cell.disciplineClassId);
+  const disciplineClassType = schedulerParams.disciplineClassTypes
+    .find(({ id }) => id === disciplineClass?.typeId);
   const lecturerNames = schedulerParams.lecturers
     .filter(({ id }) => cell.lecturerIds.includes(id))
     .map(({ name }) => name)
@@ -33,7 +35,7 @@ const ScheduleCell: React.FC<ScheduleCellProps> = ({ cell, schedulerParams }) =>
   return (
     <div className='schedule-cell'>
       <b>Заняття {cell.scheduleCell.classNumber}</b><br />
-      &bull; {disciplineClassShortName}<br />
+      &bull; {disciplineClass?.shortName}, {disciplineClassType?.shortName}<br />
       &bull; {lecturerNames}<br />
       &bull; {groupNames}<br />
       &bull; {roomName}

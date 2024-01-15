@@ -26,7 +26,7 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ schedule, schedulerParams
     
     return [
       `${room?.name} (${schedulerParams.roomTypes.find(({ id }) => id === room?.typeId)?.name})`,
-      `${schedulerParams.buildings.find(({ id }) => id === room?.buildingId)?.address} корпус`
+      `${schedulerParams.buildings.find(({ id }) => id === room?.buildingId)?.address}`
     ].join(', ')
   }
 
